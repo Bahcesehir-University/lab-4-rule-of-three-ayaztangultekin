@@ -154,6 +154,10 @@ public:
     void setData(const char* newData) {
         // TODO: Implement setData
         
+        delete[]m_data;
+        m_length=strlen(newData);
+        m_data= new char[m_length+1];
+        strcpy(m_data, newData);
         
         
         
